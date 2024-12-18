@@ -5,8 +5,20 @@ import { RouterView } from 'vue-router'
 <template>
   <NavMenu />
   <FlashBanner />
-
-  <RouterView />
+  <div class="container">
+    <RouterView />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 16px;
+  width: 100%;
+}
+</style>
