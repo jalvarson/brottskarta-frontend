@@ -2,30 +2,30 @@
 
 <template>
   <div class="flash-banner">
-    <div class="flash-banner__item">
+    <a class="flash-banner__item">
       <div class="flash-banner__item-timestamp">17:33</div>
       <div class="flash-banner__item-title">Äldre kvinna utsatt för bedrägeri försök i telefon</div>
-    </div>
-    <div class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">17:33</div>
+    </a>
+    <a class="flash-banner__item">
+      <div class="flash-banner__item-timestamp">17:11</div>
       <div class="flash-banner__item-title">Lastbil och personbil i krock</div>
-    </div>
-    <div class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">17:33</div>
+    </a>
+    <a class="flash-banner__item">
+      <div class="flash-banner__item-timestamp">16:59</div>
       <div class="flash-banner__item-title">Äldre kvinna utsatt för bedrägeri försök i telefon</div>
-    </div>
-    <div class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">17:33</div>
+    </a>
+    <a class="flash-banner__item">
+      <div class="flash-banner__item-timestamp">13:24</div>
       <div class="flash-banner__item-title">Äldre kvinna utsatt för bedrägeri försök i telefon</div>
-    </div>
-    <div class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">17:33</div>
+    </a>
+    <a class="flash-banner__item">
+      <div class="flash-banner__item-timestamp">12:56</div>
       <div class="flash-banner__item-title">This is the content of the flash banner</div>
-    </div>
-    <div class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">17:33</div>
+    </a>
+    <a class="flash-banner__item">
+      <div class="flash-banner__item-timestamp">09:02</div>
       <div class="flash-banner__item-title">This is the content of the flash banner</div>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -37,7 +37,7 @@
   background-color: $tertiary;
   cursor: pointer;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: auto;
 
   &__item {
     display: inline-flex;
@@ -61,6 +61,9 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
