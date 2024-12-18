@@ -8,12 +8,16 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CommonButton: typeof import('./components/CommonButton.vue')['default']
+    EventCard: typeof import('./components/EventCard.vue')['default']
+    EventFilter: typeof import('./components/EventFilter.vue')['default']
+    EventMap: typeof import('./components/EventMap.vue')['default']
     FlashBanner: typeof import('./components/FlashBanner.vue')['default']
     IconCommunity: typeof import('./components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./components/icons/IconEcosystem.vue')['default']
     IconSupport: typeof import('./components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./components/icons/IconTooling.vue')['default']
+    InteractiveMap: typeof import('./components/InteractiveMap.vue')['default']
     Nav: typeof import('./components/Nav.vue')['default']
     NavMenu: typeof import('./components/NavMenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
