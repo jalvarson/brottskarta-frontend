@@ -1,0 +1,14 @@
+@use '@/styles/variables/colors' as *;
+
+a {
+    color: $on-surface;
+    text-decoration: none;
+  
+    &:hover {
+      filter: brightness(1.2); /* Darkens the color */
+    }
+  
+    &:visited {
+      filter: brightness(0.7); /* Lightens the color */
+    }
+  }
