@@ -19,7 +19,7 @@ import { RouterLink } from 'vue-router'
           <RouterLink to="/about">About</RouterLink>
         </li>
       </ul>
-      <CommonButton />
+      <BKButton label="Button" prependIcon="coffee" />
     </nav>
   </header>
 </template>
