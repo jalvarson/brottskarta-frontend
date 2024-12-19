@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { GoogleMap } from 'vue3-google-map'
 
-const defaultCenter = { lat: 40.689247, lng: -74.044502 }
+const defaultCenter = { lat: 57.10557, lng: 12.25078 }
 </script>
 
 <template>
@@ -12,11 +12,13 @@ const defaultCenter = { lat: 40.689247, lng: -74.044502 }
       class="event-map"
       :center="defaultCenter"
       :zoom="8"
+      :disable-default-ui="true"
+      v-bind:disable-double-click-zoom="false"
     />
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .event-map-container {
   position: relative;
   display: flex;
