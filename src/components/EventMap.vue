@@ -6,9 +6,7 @@ const defaultCenter = { lat: 40.689247, lng: -74.044502 }
 
 <template>
   <div class="event-map-container">
-    <div class="event-card-holder">
-      <EventCard />
-    </div>
+    <EventCard />
     <GoogleMap
       api-key="AIzaSyDeWFYlg796lkBGlnPku6Waa2g8dKnYPoA"
       class="event-map"
@@ -31,16 +29,6 @@ const defaultCenter = { lat: 40.689247, lng: -74.044502 }
   min-height: 100%;
   background-color: $surface-container;
   border-radius: 12px;
-}
-
-.event-card-holder {
-  position: absolute;
-  top: 16px;
-  bottom: 16px;
-  left: 16px;
-  z-index: 1;
-  overflow: auto;
-  border-radius: 8px;
 }
 
 .event-map {
