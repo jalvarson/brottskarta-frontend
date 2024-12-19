@@ -1,58 +1,78 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="event-card">
-    <div class="event-card-header">
-      <div class="event-card-title">Brand på Ekerö</div>
-      <div class="event-card-type">
-        <div class="event-card-type-icon"></div>
-        <div class="event-card-type-label">Brand</div>
+  <div class="event-card-container">
+    <div class="event-card-wrapper">
+      <div class="event-card">
+        <div class="event-card-header">
+          <div class="event-card-title">Brand på Ekerö</div>
+          <div class="event-card-type">
+            <div class="event-card-type-icon"></div>
+            <div class="event-card-type-label">Brand</div>
+          </div>
+        </div>
+        <div class="event-card-divider"></div>
+        <div class="event-card-publication">
+          <div class="event-card-publication-label">Inträffade 18:30</div>
+          <div class="event-card-publication-label">Publicerades 19:44</div>
+        </div>
+        <div class="event-card-divider"></div>
+        <div class="event-card-description">
+          SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig
+          och koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma,
+          inga uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans
+          med andra blåljusresurser.
+        </div>
+        <div class="event-card-divider"></div>
+        <div class="event-card-description">
+          SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig
+          och koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma,
+          inga uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans
+          med andra blåljusresurser.
+        </div>
+        <div class="event-card-divider"></div>
+        <div class="event-card-description">
+          SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig
+          och koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma,
+          inga uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans
+          med andra blåljusresurser.
+        </div>
       </div>
-    </div>
-    <div class="event-card-divider"></div>
-    <div class="event-card-publication">
-      <div class="event-card-publication-label">Inträffade 18:30</div>
-      <div class="event-card-publication-label">Publicerades 19:44</div>
-    </div>
-    <div class="event-card-divider"></div>
-    <div class="event-card-description">
-      SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig och
-      koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma, inga
-      uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans med
-      andra blåljusresurser.
-    </div>
-    <div class="event-card-divider"></div>
-    <div class="event-card-description">
-      SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig och
-      koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma, inga
-      uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans med
-      andra blåljusresurser.
-    </div>
-    <div class="event-card-divider"></div>
-    <div class="event-card-description">
-      SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig och
-      koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma, inga
-      uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans med
-      andra blåljusresurser.
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.event-card {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-self: stretch;
+.event-card-container {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.event-card-wrapper {
+  padding: 20px 10px 20px 16px;
+  background-color: $surface-container;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   width: 100%;
   width: 320px;
-  min-height: 100%;
-  background-color: $surface-container;
-  border-radius: 8px;
-  padding: 20px 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  align-self: stretch;
+  height: 100%;
+}
+
+.event-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 12px;
 }
 
 .event-card-footer-gradient {
