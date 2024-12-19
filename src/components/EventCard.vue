@@ -7,14 +7,14 @@
         <div class="event-card-header">
           <div class="event-card-title">Brand på Ekerö</div>
           <div class="event-card-type">
-            <div class="event-card-type-icon"></div>
+            <font-awesome-icon icon="fire" class="event-card-type-icon" />
             <div class="event-card-type-label">Brand</div>
           </div>
         </div>
         <div class="event-card-divider"></div>
         <div class="event-card-publication">
-          <div class="event-card-publication-label">Inträffade 18:30</div>
-          <div class="event-card-publication-label">Publicerades 19:44</div>
+          <div class="event-card-publication-label">Inträffade: 18:30</div>
+          <div class="event-card-publication-label">Publicerades: 19:44</div>
         </div>
         <div class="event-card-divider"></div>
         <div class="event-card-description">
@@ -86,7 +86,7 @@
 
 .event-card-divider {
   width: 100%;
-  height: 1px;
+  min-height: 1px;
   background-color: $outline-variant;
   opacity: 0.5;
 }
@@ -94,7 +94,7 @@
 .event-card-header {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .event-card-title {
@@ -105,19 +105,19 @@
 .event-card-type {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   &-label {
-    @include labelMedium;
+    @include labelLarge;
     color: $primary;
   }
   &-icon {
-    width: 12px;
-    height: 12px;
-    background-color: $primary;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $primary;
   }
 }
 
