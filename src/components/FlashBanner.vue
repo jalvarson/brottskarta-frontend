@@ -37,7 +37,7 @@
   background-color: $tertiary;
   cursor: pointer;
   white-space: nowrap;
-  overflow: auto;
+  overflow: hidden;
 
   &__item {
     display: inline-flex;
