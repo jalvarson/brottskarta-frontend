@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BKButton: typeof import('./components/BKButton.vue')['default']
     CommonButton: typeof import('./components/CommonButton.vue')['default']
     EventCard: typeof import('./components/EventCard.vue')['default']
     EventFilter: typeof import('./components/EventFilter.vue')['default']
@@ -18,6 +19,7 @@ declare module 'vue' {
     IconSupport: typeof import('./components/icons/IconSupport.vue')['default']
     IconTooling: typeof import('./components/icons/IconTooling.vue')['default']
     InteractiveMap: typeof import('./components/InteractiveMap.vue')['default']
+    LoadingIndicator: typeof import('./components/common/LoadingIndicator.vue')['default']
     Nav: typeof import('./components/Nav.vue')['default']
     NavMenu: typeof import('./components/NavMenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
