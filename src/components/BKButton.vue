@@ -2,14 +2,14 @@
 interface ButtonProps {
   label?: string
   size?: 'small' | 'medium' | 'large'
-  color?: 'primary' | 'red'
-  type?: 'button' | 'submit' | 'reset'
+  color?: 'primary' | 'secondary'
   variant?: 'text' | 'outline' | 'contained'
   onPress?: () => void
   prependIcon?: string
   appendIcon?: string
   disabled?: boolean
   loading?: boolean
+  type?: 'button' | 'submit' | 'reset'
 }
 withDefaults(defineProps<ButtonProps>(), {
   size: 'medium',
@@ -79,7 +79,7 @@ withDefaults(defineProps<ButtonProps>(), {
   color: $on-primary;
 }
 
-.button-wrapper--red {
+.button-wrapper--secondary {
   background-color: $tertiary;
   color: $on-tertiary;
 }

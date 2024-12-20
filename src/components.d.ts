@@ -7,7 +7,9 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BKBadge: typeof import('./components/BKBadge.vue')['default']
     BKButton: typeof import('./components/BKButton.vue')['default']
+    BKIconButton: typeof import('./components/BKIconButton.vue')['default']
     CommonButton: typeof import('./components/CommonButton.vue')['default']
     EventCard: typeof import('./components/EventCard.vue')['default']
     EventFilter: typeof import('./components/EventFilter.vue')['default']

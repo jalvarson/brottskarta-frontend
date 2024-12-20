@@ -23,14 +23,18 @@
           inga uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans
           med andra blåljusresurser.
         </div>
-        <div class="event-card-divider"></div>
+        <div class="event-update-separator">
+          <BKBadge label="Updatering #1" color="secondary" :rounded="true" />
+        </div>
         <div class="event-card-description">
           SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig
           och koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma,
           inga uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans
           med andra blåljusresurser.
         </div>
-        <div class="event-card-divider"></div>
+        <div class="event-update-separator">
+          <BKBadge label="Updatering #1" color="secondary" :rounded="true" />
+        </div>
         <div class="event-card-description">
           SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig
           och koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma,
@@ -85,10 +89,32 @@
 }
 
 .event-card-divider {
-  width: 100%;
   min-height: 1px;
   background-color: $outline-variant;
   opacity: 0.5;
+}
+
+.event-update-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  padding: 8px 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: $outline-variant;
+    opacity: 0.5;
+  }
+
+  &::before,
+  ::after {
+    margin-right: 8px;
+  }
 }
 
 .event-card-header {

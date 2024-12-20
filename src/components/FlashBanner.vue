@@ -3,27 +3,27 @@
 <template>
   <div class="flash-banner">
     <a class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">17:33</div>
+      <BKBadge label="13:37" color="secondary-dark" />
       <div class="flash-banner__item-title">Äldre kvinna utsatt för bedrägeri försök i telefon</div>
     </a>
     <a class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">17:11</div>
+      <BKBadge label="13:37" color="secondary-dark" />
       <div class="flash-banner__item-title">Lastbil och personbil i krock</div>
     </a>
     <a class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">16:59</div>
+      <BKBadge label="13:37" color="secondary-dark" />
       <div class="flash-banner__item-title">Äldre kvinna utsatt för bedrägeri försök i telefon</div>
     </a>
     <a class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">13:24</div>
+      <BKBadge label="13:37" color="secondary-dark" />
       <div class="flash-banner__item-title">Äldre kvinna utsatt för bedrägeri försök i telefon</div>
     </a>
     <a class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">12:56</div>
+      <BKBadge label="13:37" color="secondary-dark" />
       <div class="flash-banner__item-title">This is the content of the flash banner</div>
     </a>
     <a class="flash-banner__item">
-      <div class="flash-banner__item-timestamp">09:02</div>
+      <BKBadge label="13:37" color="secondary-dark" />
       <div class="flash-banner__item-title">This is the content of the flash banner</div>
     </a>
   </div>
@@ -47,14 +47,6 @@
     gap: 6px;
     padding: 0 8px;
     flex-shrink: 0;
-
-    &-timestamp {
-      color: $tertiary;
-      background-color: $on-tertiary;
-      @include labelMedium;
-      border-radius: 6px;
-      padding: 2px 6px;
-    }
 
     &-title {
       color: $on-tertiary;
