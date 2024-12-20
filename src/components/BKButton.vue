@@ -5,6 +5,7 @@ interface ButtonProps {
   color?: 'primary' | 'red'
   type?: 'button' | 'submit' | 'reset'
   variant?: 'text' | 'outline' | 'contained'
+  onPress?: () => void
   prependIcon?: string
   appendIcon?: string
   disabled?: boolean
@@ -26,6 +27,7 @@ withDefaults(defineProps<ButtonProps>(), {
     :disabled="disabled"
     class="button-wrapper"
     :class="[`button-wrapper--${size}`, `button-wrapper--${color}`, `button-wrapper--${variant}`]"
+    @click="onPress"
   >
     <slot name="prependIcon">
       <font-awesome-icon
