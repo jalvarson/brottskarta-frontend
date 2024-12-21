@@ -22,13 +22,21 @@ defineProps<ButtonProps>()
   align-items: center;
   border-radius: 99px;
   width: 40px;
+  height: 40px;
   cursor: pointer;
   background-color: transparent;
+  border: none;
+
+  &:hover {
+    background-color: $surface-container-high;
+  }
+  &:active {
+    background-color: $surface-container-highest;
+  }
 }
 
 .button-container__icon {
-  width: 24px;
-  height: 24px;
+  font-size: 20px;
   color: $on-surface;
 }
 </style>
