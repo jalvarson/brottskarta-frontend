@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { useThemeStore } from '@/stores/themeStore'
+
+const themeStore = useThemeStore()
+
+const toggleTheme = () => {
+  themeStore.toggleTheme()
+}
 </script>
 
 <template>
@@ -19,7 +26,7 @@ import { RouterLink } from 'vue-router'
           <RouterLink to="/about">About</RouterLink>
         </li>
       </ul>
-      <BKButton label="Button" prependIcon="coffee" />
+      <BKIconButton :icon="themeStore.isDarkMode ? 'sun' : 'moon'" :onPress="toggleTheme" />
     </nav>
   </header>
 </template>
