@@ -20,10 +20,13 @@ const toggleTheme = () => {
     <nav class="header__menu">
       <ul class="header__menu-links">
         <li class="header__menu-item">
-          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/">Ort</RouterLink>
         </li>
         <li class="header__menu-item">
-          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/about">Län</RouterLink>
+        </li>
+        <li class="header__menu-item">
+          <RouterLink to="/about">Om Brottskartan</RouterLink>
         </li>
       </ul>
       <BKIconButton :icon="themeStore.isDarkMode ? 'sun' : 'moon'" :onPress="toggleTheme" />
