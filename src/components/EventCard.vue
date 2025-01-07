@@ -1,29 +1,40 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { IEvent } from '@/services/models/EventsModel'
+import { formatSwedishDate } from '@/utils/dateUtils'
+
+const props = defineProps<{
+  event: IEvent
+}>()
+</script>
 
 <template>
   <div class="event-card-container">
     <div class="event-card-wrapper">
       <div class="event-card">
         <div class="event-card-header">
-          <div class="event-card-title">Brand på Ekerö</div>
+          <div class="event-card-title">
+            {{ props.event.summary }}
+          </div>
           <div class="event-card-type">
             <font-awesome-icon icon="fire" class="event-card-type-icon" />
-            <div class="event-card-type-label">Brand</div>
+            <div class="event-card-type-label">{{ props.event.type }}</div>
           </div>
         </div>
         <div class="event-card-divider"></div>
         <div class="event-card-publication">
-          <div class="event-card-publication-label">Inträffade: 18:30</div>
-          <div class="event-card-publication-label">Publicerades: 19:44</div>
+          <div class="event-card-publication-label">ID: {{ props.event.id }}</div>
+          <div class="event-card-publication-label">
+            Publicerades: {{ props.event.name.split(',')[0] }}
+          </div>
+          <div class="event-card-publication-label">
+            Inträffade: {{ formatSwedishDate(props.event.datetime) }}
+          </div>
         </div>
         <div class="event-card-divider"></div>
         <div class="event-card-description">
-          SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig
-          och koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma,
-          inga uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans
-          med andra blåljusresurser.
+          {{ props.event.body ?? 'Ingen beskrivning' }}
         </div>
-        <div class="event-update-separator">
+        <!-- <div class="event-update-separator">
           <BKBadge label="Updatering #1" color="secondary" :rounded="true" />
         </div>
         <div class="event-card-description">
@@ -31,16 +42,7 @@
           och koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma,
           inga uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans
           med andra blåljusresurser.
-        </div>
-        <div class="event-update-separator">
-          <BKBadge label="Updatering #1" color="secondary" :rounded="true" />
-        </div>
-        <div class="event-card-description">
-          SOS larmas om en brand i ett flerfamiljshus på Ekgatan. Rökutvecklingen ska vara kraftig
-          och koncentrerad till en trappuppgång. Lägenheterna i trappuppgången uppges vara tomma,
-          inga uppgifter om att någon person kommit till fysisk skada. Polis är på plats tillsammans
-          med andra blåljusresurser.
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -126,6 +128,7 @@
 .event-card-title {
   @include titleLarge;
   color: $on-surface;
+  line-height: 1.8rem;
 }
 
 .event-card-type {

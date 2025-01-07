@@ -1,12 +1,15 @@
 <script setup lang="ts">
+import { useEventsStore } from '@/stores/eventsStore'
 import { GoogleMap } from 'vue3-google-map'
+
+const eventStore = useEventsStore()
 
 const defaultCenter = { lat: 62.2724038, lng: 14.8042141 }
 </script>
 
 <template>
   <div class="event-map-container">
-    <EventCard />
+    <EventCard v-if="eventStore.events.length > 0" :event="eventStore.events[36]" />
     <GoogleMap
       api-key="AIzaSyDeWFYlg796lkBGlnPku6Waa2g8dKnYPoA"
       class="event-map"
