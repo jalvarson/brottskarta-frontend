@@ -13,7 +13,7 @@ const props = defineProps<{
       <div class="event-card">
         <div class="event-card-header">
           <div class="event-card-title">
-            {{ props.event.summary }}
+            {{ props.event.type }} i {{ props.event.location.name }}
           </div>
           <div class="event-card-type">
             <font-awesome-icon icon="fire" class="event-card-type-icon" />
@@ -24,13 +24,16 @@ const props = defineProps<{
         <div class="event-card-publication">
           <div class="event-card-publication-label">ID: {{ props.event.id }}</div>
           <div class="event-card-publication-label">
-            Publicerades: {{ props.event.name.split(',')[0] }}
+            Inträffade: {{ formatSwedishDate(props.event.occurred) }}
           </div>
           <div class="event-card-publication-label">
-            Inträffade: {{ formatSwedishDate(props.event.datetime) }}
+            Publicerades: {{ formatSwedishDate(props.event.published) }}
           </div>
         </div>
         <div class="event-card-divider"></div>
+        <div class="event-card-summary">
+          {{ props.event.summary }}
+        </div>
         <div class="event-card-description">
           {{ props.event.body ?? 'Ingen beskrivning' }}
         </div>
@@ -128,7 +131,6 @@ const props = defineProps<{
 .event-card-title {
   @include titleLarge;
   color: $on-surface;
-  line-height: 1.8rem;
 }
 
 .event-card-type {
@@ -162,6 +164,11 @@ const props = defineProps<{
 
 .event-card-description {
   @include bodyLarge;
+  color: $on-surface;
+}
+
+.event-card-summary {
+  @include titleMedium;
   color: $on-surface;
 }
 </style>
