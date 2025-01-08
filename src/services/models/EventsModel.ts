@@ -1,6 +1,7 @@
 export interface IEvent {
   id: number
-  datetime: Date
+  published: Date
+  occurred: Date
   location: {
     name: string
     coordinates: [number, number]
