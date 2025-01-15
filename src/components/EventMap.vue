@@ -9,9 +9,9 @@ const defaultCenter = { lat: 62.2724038, lng: 14.8042141 }
 
 <template>
   <div class="event-map-container">
-    <EventCard v-if="eventStore.events.length > 0" :event="eventStore.events[36]" />
+    <EventCard v-if="eventStore.events.length > 0" :event="eventStore.events[5]" />
     <GoogleMap
-      api-key="AIzaSyDeWFYlg796lkBGlnPku6Waa2g8dKnYPoA"
+      apiKey="{{import.meta.env.VITE_GOOGLE_MAPS_API_KEY}}"
       class="event-map"
       :center="defaultCenter"
       :zoom="4.8"
