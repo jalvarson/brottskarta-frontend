@@ -50,7 +50,7 @@ withDefaults(defineProps<ButtonProps>(), {
   justify-content: center;
   align-items: center;
   padding: 8px 16px;
-  border-radius: 12px;
+  border-radius: 16px;
   cursor: pointer;
   transition:
     background-color 0.3s,
